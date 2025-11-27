@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="app.MainController">
+    <top>
+        <MenuBar>
+            <Menu fx:id="languageMenu" text="%menu.language">
+                <MenuItem text="Македонски" onAction="#setMacedonian"/>
+                <MenuItem text="English" onAction="#setEnglish"/>
+                <MenuItem text="Shqip" onAction="#setAlbanian"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <AnchorPane>
+            <children>
+                <TextField fx:id="symptomField" layoutX="20" layoutY="20" promptText="%label.symptom"/>
+                <Button layoutX="300" layoutY="20" text="%button.search" onAction="#onSearch"/>
+                <ListView fx:id="resultsList" layoutX="20" layoutY="60" prefWidth="400" prefHeight="300"/>
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>
